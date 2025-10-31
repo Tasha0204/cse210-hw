@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //ask the user for a magic number between 1 and 100.
+        //ask the user for a magic number between 1 and 100
         // Console.Write("What is the magic number? ");
         //int magicNumber = int.Parse(Console.ReadLine());
         //cosole.write("What is your guess?");
