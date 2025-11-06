@@ -28,10 +28,10 @@ class Program
         }
 
         Console.WriteLine($"The sum is: {sum}");
-        // Part 2: Compute the average
+
         float average = ((float)sum / numbers.Count);
+        
         Console.WriteLine($"The average is: {average}");
-        // 3. Find the maximum number
         int MaxNumber = numbers[0];
         foreach (int number in numbers)
         {
