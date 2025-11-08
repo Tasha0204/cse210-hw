@@ -43,15 +43,15 @@ public class Journal
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"\n Error saving the document to your journal: {ex.Message}]");
+            Console.WriteLine($"\n Error saving the document to your journal: {ex.Message}");
         }
     }
 
     public void LoadFromFile(string file)
     {
-        _entries.Clear(); 
-        string separator = "~|~"; 
-        
+        _entries.Clear();
+        string separator = "~|~";
+
         try
         {
             string[] lines = File.ReadAllLines(file);
@@ -64,21 +64,41 @@ public class Journal
                 {
                     Entry newEntry = new Entry();
                     newEntry._date = parts[0];
-                    newEntry._promptText = parts[1]; 
-                    newEntry._entryText = parts[2];  
+                    newEntry._promptText = parts[1];
+                    newEntry._entryText = parts[2];
 
                     _entries.Add(newEntry);
                 }
             }
-            Console.WriteLine($"\n We have successfully loaded your journal information from: {file}.Total entries:{_entries.Count}]");
+            Console.WriteLine($"\n We have successfully loaded your journal information from: {file}.Total entries:{_entries.Count}");
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine($"\n Error loading file {file} The path you specified is incorrect..]");
+            Console.WriteLine($"\n Error loading file {file} The path you specified is incorrect..");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"\n  {ex.Message}]");
+            Console.WriteLine($"\n  {ex.Message}");
         }
+    }
+    public void FilterByDate(string date)
+    {
+         Console.WriteLine($"\n  Entries on {date}");
+          bool found = false;
+         
+         foreach (Entry entry in _entries)
+          {
+            if (entry._date == date) 
+           {
+            entry.Display();
+            found = true;
+           }
+          }
+
+            if (!found)
+           {
+            Console.WriteLine($"No entries found for the date: {date}.");
+         }
+           Console.WriteLine();
     }
 }
