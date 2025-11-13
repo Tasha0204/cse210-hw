@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic; 
+
 //I decided to create a conditional structure and add a congratulatory message when all the letters are hidden.
 //I also added an encouraging message that will appear after the user types the word "exit" and hasn't fully memorized the scripture.
 
