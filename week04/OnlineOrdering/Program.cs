@@ -18,7 +18,7 @@ public class Program
 
         Order order1 = new Order(productslist1, customer1);
 
-        Console.WriteLine("// Order Number 1:");
+        Console.WriteLine("Order Number 1:");
         order1.DisplayResults();
         Console.WriteLine("\n");
 
@@ -37,7 +37,7 @@ public class Program
 
         Order order2 = new Order(productslist2, customer2);
 
-        Console.WriteLine("// Order Number 2:");
+        Console.WriteLine("Order Number 2:");
         order2.DisplayResults();
         Console.WriteLine("\n");
 
@@ -54,7 +54,7 @@ public class Program
 
         Order order3 = new Order(productslist3, customer3);
 
-        Console.WriteLine("// Order Number 3:");
+        Console.WriteLine(" Order Number 3:");
         order3.DisplayResults();
         Console.WriteLine("\n");
     }
