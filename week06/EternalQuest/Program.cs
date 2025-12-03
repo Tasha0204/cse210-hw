@@ -1,5 +1,5 @@
 using System;
-
+//Inclement, a code to measure the level based on the total accumulated points, which are level 1 Beginner, level 2 Journeyman, level 3 Master
 public class Program
 {
     public static void Main(string[] args)
@@ -13,6 +13,7 @@ public class Program
             int currentPoints = tracker.GetAccumulatedPoints();
             string level = CalculateLevel(currentPoints);
             
+            Console.WriteLine($"Your level is: {level} ");
             Console.WriteLine($"You have {currentPoints} points");
             Console.WriteLine();
             
